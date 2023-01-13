@@ -16,3 +16,9 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin arrowButtons {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}

@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.container {
+    @include centerByFlex;
+    background: url("../../assets/images/backgroundGray.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 7%;
+    .box {
+        @include centerByFlex;
+        .logos {
+            svg {
+                margin: 1rem;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $primaryColor;
+                    path {
+                        fill: $whiteColor;
+                    }
+                }
+            }
+        }
+    }
+}

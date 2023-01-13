@@ -1,10 +1,9 @@
 import { FC } from "react";
 
-import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-
 import Button from "../../atoms/PrimaryButton/PrimaryButton";
-import RoundButton from "../../atoms/RoundButton/RoundButton";
+
 import Text from "../../atoms/Text/Text";
+import ButtonsLeftRight from "../../components/ButtonsLeftRight/ButtonsLeftRight";
 
 import styles from "./Header.module.scss";
 
@@ -36,10 +35,14 @@ by injected humour majority "
               <Button text="services" />
             </div>
           </div>
-        </div>
-        <div className={styles.roundButtonsContainer}>
-          <RoundButton innerElement={<MdArrowBackIosNew />} />
-          <RoundButton innerElement={<MdArrowForwardIos />} />
+          <ButtonsLeftRight
+            onClickLeft={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+            onClickRight={function (): void {
+              throw new Error("Function not implemented.");
+            }}
+          />
         </div>
       </div>
     </>
