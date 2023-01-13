@@ -1,0 +1,57 @@
+@import "../../assets/styles/variables.module.scss";
+.card {
+    margin: 1rem;
+    display: flex;
+    aspect-ratio: 3 / 2;
+    width: 350px;
+    color: $secondaryColor;
+    box-shadow: 5px 5px 20px $grayColor;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+        .card__counter {
+            background-color: $whiteColor;
+            color: $primaryColor;
+        }
+        .card__icon {
+            color: $primaryColor;
+            background-color: $whiteColor;
+        }
+        .card__containerRight span {
+            color: $whiteColor;
+        }
+        .card__containerRight button {
+            color: $whiteColor;
+        }
+    }
+    &__counter {
+        background-color: $primaryColor;
+        color: $whiteColor;
+        position: absolute;
+        border-radius: 50%;
+        top: -16px;
+        left: -10px;
+        padding: 1.2rem 1.5rem 1rem 1.5rem;
+    }
+    &__icon {
+        color: $whiteColor;
+        background-color: $primaryColorLighter;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    &__container {
+        &Left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &Right {
+            padding: 1rem;
+        }
+    }
+}

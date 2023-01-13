@@ -5,31 +5,73 @@
 }
 
 .base {
-  text-align: center;
+  &.align {
+    &-center {
+      text-align: center;
+    }
+  }
+}
+.primaryColor {
+  color: $primaryColor;
 }
 
 .p {
   font-family: "Poppins";
-
   color: $whiteColor;
+  font-style: normal;
 
   &.hasType {
     &-h1 {
       line-height: 76px;
-      font-style: normal;
       font-weight: 900;
-      font-size: 58px;
+      font-size: $veryBig;
     }
     &-h2 {
+      font-weight: 700;
+      font-size: $big;
+      line-height: 50px;
+      text-transform: capitalize;
+    }
+    &-h3 {
       font-family: "Noto Sans";
-      font-size: 15px;
+      font-size: $small;
       line-height: 24px;
+    }
+    &-h4 {
+      font-weight: 600;
+      font-size: $medium;
+      line-height: 30px;
+    }
+    &-h5 {
+      font-family: "Noto Sans";
+      font-size: $small;
+      line-height: 24px;
+    }
+    &-h6 {
+      font-family: "Noto Sans";
+      font-size: $medium;
+      line-height: 24px;
+    }
+    &-secondPartTextColor {
+      color: $primaryColor;
     }
   }
 
   &.hasColor {
     &-primaryColor {
       color: $primaryColor;
+    }
+    &-secondaryColor {
+      color: $secondaryColor;
+    }
+    &-grayColor {
+      color: $grayColor;
+    }
+    &-whiteColor {
+      color: $whiteColor;
+    }
+    &-whiteColor {
+      color: $whiteColor;
     }
   }
 }
