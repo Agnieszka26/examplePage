@@ -1,0 +1,9 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.features {
+    @include centerByFlex;
+    background-color: $secondaryColor;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+}

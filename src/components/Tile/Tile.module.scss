@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.tile {
+    @include cardAndTile;
+    background-color: $whiteColor;
+    width: 250px;
+    padding: 1rem 0;
+    .center {
+        display: flex;
+        justify-content: center;
+        img {
+            padding: 2rem;
+        }
+        p {
+            margin-top: -1rem;
+        }
+    }
+}
