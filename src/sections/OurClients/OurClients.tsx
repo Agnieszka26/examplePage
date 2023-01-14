@@ -1,7 +1,5 @@
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
-import RoundButton from "../../atoms/RoundButton/RoundButton";
-
 import Logo1 from "../../assets/icons/logos/Logo1.js";
 import Logo2 from "../../assets/icons/logos/Logo2.js";
 import Logo3 from "../../assets/icons/logos/Logo3.js";
@@ -23,6 +21,7 @@ const OurClients = () => {
           bigHeader={titles.bigHeader}
           smallerHeader={titles.smallerHeader}
           align="left"
+          smallerHeaderDarker
         />
       </div>
       <div className={styles.box}>
