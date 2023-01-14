@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables.module.scss";
+
+.listElement {
+  display: flex;
+  align-items: center;
+  a {
+    align-items: center;
+    text-decoration: none;
+    color: $whiteColor;
+    &.active {
+      &-true {
+        color: $primaryColor;
+      }
+    }
+    &:hover {
+      color: $primaryHoverColor;
+    }
+  }
+}

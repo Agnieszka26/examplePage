@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.roundButtonsContainer {
+    @include arrowButtons;
+    padding-right: 3%;
+
+    &.color {
+        &-darker {
+            padding: 1rem;
+            justify-content: space-between;
+
+            button {
+                color: $secondaryColor;
+                border: 1px solid $secondaryColor;
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import "../../assets/styles/variables.module.scss";
+
+.transparentButton {
+    background: transparent;
+    border: none;
+    color: $primaryColor;
+    padding: 0;
+}

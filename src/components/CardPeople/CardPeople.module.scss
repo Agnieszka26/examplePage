@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.card {
+    aspect-ratio: 1/2;
+    // display: flex;
+    width: 250px;
+    color: $secondaryColor;
+    box-shadow: 5px 5px 20px $grayColor;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    border-bottom-right-radius: 70px;
+    .cardImage {
+        border: 4px solid red;
+        height: 80%;
+        img {
+            max-width: 100%;
+            // object-fit: contain;
+        }
+    }
+    .cardBody {
+        height: 20%;
+    }
+}

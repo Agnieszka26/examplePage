@@ -1,0 +1,10 @@
+.header {
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    &.align {
+        &-left {
+            text-align: left;
+        }
+    }
+}

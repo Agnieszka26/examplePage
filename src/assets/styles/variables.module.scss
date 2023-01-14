@@ -1,21 +1,27 @@
 //colors
 $primaryColor: rgb(255, 72, 21);
+$primaryColorLighter: rgb(255, 212, 200);
 $primaryHoverColor: rgb(148, 49, 21);
 $whiteColor: rgb(255, 255, 255);
 $secondaryColor: rgb(20, 33, 43);
 $thirdColor: rgba(255, 72, 21, 0.1);
 $grayColor: rgb(196, 196, 196);
 
+//font size
+$smaller: 14px;
+$small: 16px;
+$medium: 20px;
+$big: 32px;
+$veryBig: 52px;
+
 //breakpoints
 
 $breakpointTablet: 768;
 $breakpointSmartphone: 390;
- 
 
-
-:root{
-
+:root {
     --primary-color: rgb(255, 72, 21);
+    --primaryColorLighter: rgb(255, 212, 200);
     --primary-hover-color: rgb(148, 49, 21);
     --white-color: rgb(255, 255, 255);
     --secondary-color: rgb(20, 33, 43);
@@ -24,16 +30,26 @@ $breakpointSmartphone: 390;
 
     --breakpoint-tablet: 768px;
     --breakpoint-smartphone: 390px;
+    --smaller: 14px;
+    --small: 16px;
+    --medium: 20px;
+    --big: 32px;
+    --veryBig: 52px;
 }
 
-
 :export {
+    primaryColorLighter: $primaryColorLighter;
     primaryColor: $primaryColor;
     primaryHoverColor: $primaryHoverColor;
     whiteColor: $whiteColor;
-    secondaryColor:$secondaryColor;
-    thirdColor:$thirdColor;
+    secondaryColor: $secondaryColor;
+    thirdColor: $thirdColor;
     grayColor: $grayColor;
     breakpointTablet: $breakpointTablet;
     breakpointSmartphone: $breakpointSmartphone;
+    smaller: $smaller;
+    small: $small;
+    medium: $medium;
+    big: $big;
+    veryBig: $veryBig;
 }

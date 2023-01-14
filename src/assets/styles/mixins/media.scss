@@ -1,0 +1,24 @@
+@import "../variables.module.scss";
+
+@mixin cardAndTile {
+    margin: 1rem;
+    aspect-ratio: 3 / 2;
+    border-radius: 8px;
+}
+
+@mixin negativePrimaryColor {
+    color: $primaryColor;
+    background-color: $whiteColor;
+}
+
+@mixin centerByFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin arrowButtons {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}

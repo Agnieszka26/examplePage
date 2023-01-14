@@ -1,44 +1,95 @@
 import { FC, useEffect, useState } from "react";
 
 import Button from "../../atoms/PrimaryButton/PrimaryButton";
-import Link from "../../atoms/Link/Link";
+import ListElement from "../../atoms/ListElement/ListElement";
 import Logo from "../../atoms/Logo/Logo";
+import List from "../../atoms/List/List";
+import ListSmallScreen from "../../atoms/ListSmallScreen/ListSmallScreen";
+import ListElementSmallScreen from "../../atoms/ListElementSmallScreen/ListElementSmallScreen";
+import { RoutesPath } from "../../constants";
 
-import useWindowDimensions from "../../assets/hooks/useWindowDimensions";
-import { GiHamburgerMenu } from "react-icons/gi";
+import HamburgerButton from "../../atoms/HamburgerButton/HamburgerButton";
 
 import styles from "./Navbar.module.scss";
-import variables from "../../assets/styles/variables.module.scss";
+
+const listElementData = [
+  {
+    text: "HOME",
+    href: RoutesPath.HOME,
+    active: true,
+    withDropdown: false,
+  },
+  {
+    text: "ABOUT",
+    href: RoutesPath.ABOUT,
+    active: false,
+    withDropdown: false,
+  },
+  {
+    text: "SERVICES",
+    href: RoutesPath.SERVICES,
+    active: false,
+    withDropdown: true,
+  },
+  {
+    text: "BLOG ",
+    href: RoutesPath.BLOG,
+    active: false,
+    withDropdown: true,
+  },
+  {
+    text: "CONTACT ",
+    href: RoutesPath.CONTACT,
+    active: false,
+    withDropdown: false,
+  },
+];
 
 const Navbar: FC = () => {
-  const { width } = useWindowDimensions();
-
-  const [isSmallScreen, setSmallScreen] = useState(true);
-
-  console.log(variables.breakpointTablet);
-  useEffect(() => {
-    width > Number(variables.breakpointTablet)
-      ? setSmallScreen(false)
-      : setSmallScreen(true);
-  }, [width]);
-
+  const [open, setOpen] = useState<boolean>(false);
+  const onClick = () => {
+    setOpen((prev) => !prev);
+  };
   return (
-    <nav className={styles.nav}>
-      <Logo />
-      {isSmallScreen ? (
-        <GiHamburgerMenu />
-      ) : (
-        <ul className={styles.ul}>
-          <Link text="HOME" href="/" active />
-          <Link text="ABOUT" href="/" />
-          <Link text="SERVICES" href="/" withDropdown />
-          <Link text="BLOG " href="/" withDropdown />
-          <Link text="CONTACT " href="/" />
-        </ul>
-      )}
+    <>
+      <nav className={styles.nav}>
+        <Logo />
 
-      <Button text="Question A Quoto" />
-    </nav>
+        <HamburgerButton isOpen={open} onClick={onClick} />
+        <List>
+          {listElementData.map(
+            ({ href, text, active, withDropdown }, index) => (
+              <ListElement
+                key={`${text}-${index}`}
+                href={href}
+                text={text}
+                active={active}
+                withDropdown={withDropdown}
+              />
+            )
+          )}
+          <Button text="Question A Quoto" />
+        </List>
+      </nav>
+      {open ? (
+        <ListSmallScreen>
+          {listElementData.map(
+            ({ href, text, active, withDropdown }, index) => (
+              <ListElementSmallScreen
+                key={`${text}-${index}`}
+                href={href}
+                text={text}
+                active={active}
+                withDropdown={withDropdown}
+              />
+            )
+          )}
+          <div className={styles.button}>
+            <Button text="Question A Quoto" />
+          </div>
+        </ListSmallScreen>
+      ) : null}
+    </>
   );
 };
 

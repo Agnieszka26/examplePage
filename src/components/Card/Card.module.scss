@@ -1,0 +1,53 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.card {
+    @include cardAndTile;
+    display: flex;
+    width: 350px;
+    color: $secondaryColor;
+    box-shadow: 5px 5px 20px $grayColor;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    &:hover {
+        color: $whiteColor;
+        background-color: $primaryColor;
+        .card__counter {
+            @include negativePrimaryColor;
+        }
+        .card__icon {
+            @include negativePrimaryColor;
+        }
+        .card__containerRight span {
+            color: $whiteColor;
+        }
+        .card__containerRight button {
+            color: $whiteColor;
+        }
+    }
+    &__counter {
+        background-color: $primaryColor;
+        color: $whiteColor;
+        position: absolute;
+        border-radius: 50%;
+        top: -16px;
+        left: -10px;
+        padding: 1.2rem 1.5rem 1rem 1.5rem;
+    }
+    &__icon {
+        color: $whiteColor;
+        background-color: $primaryColorLighter;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin: 1rem;
+    }
+    &__container {
+        &Left {
+            @include centerByFlex;
+        }
+        &Right {
+            padding: 1rem;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.container {
+    @include centerByFlex;
+    padding: 3rem 0;
+    flex-wrap: wrap;
+}
+.nav {
+    @include centerByFlex;
+    box-shadow: 5px 5px 20px $grayColor;
+    border-radius: 8px;
+    padding: 0.5rem;
+    .navElements {
+        cursor: pointer;
+        transition: 0.3s;
+        padding: 0.5rem;
+        &:hover {
+            background-color: $primaryColor;
+            color: $whiteColor;
+        }
+    }
+}

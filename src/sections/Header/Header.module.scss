@@ -1,11 +1,27 @@
-.container{
-    background: url('../../assets/images/background.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 100%; 
+.container {
+  background: url("../../assets/images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
 }
 
-.section{
-    height: 100vh;
+.containerCenter {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 30%;
+}
+.roundButtonsContainer {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  padding-right: 3%;
 }

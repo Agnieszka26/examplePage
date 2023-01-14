@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.module.scss";
+@import "../../assets/styles/mixins/media.scss";
+
+.tileBlank {
+    margin: 1rem;
+    aspect-ratio: 2 / 2;
+    width: 300px;
+    background-color: $grayColor;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    &:hover {
+        background-color: $primaryColor;
+        color: $whiteColor;
+    }
+}
